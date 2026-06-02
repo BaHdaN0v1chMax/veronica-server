@@ -22,6 +22,7 @@ VERONICA_PROMPT = """Ты — ВЕРОНИКА, искусственный ин�
 
 @app.route('/alice', methods=['POST'])
 def alice_webhook():
+    print("===== ALOHA! ЭТО НОВЫЙ КОД! =====")
     body = request.json
     user_text = body.get('request', {}).get('original_utterance', '')
     user_id = body.get('session', {}).get('user_id', 'default_user')
